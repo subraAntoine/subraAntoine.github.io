@@ -1,8 +1,8 @@
 
 :root{
     --beige : #F0F3BD;
-    --vert-light : #02C39A;
-    --vert-mid : #00A896;
+    --vert-light : #7EBDC2;
+    --vert-mid : #7EBDC2;
     --blue-mid : #028090;
     --blue-dark : #05688D;
 }
@@ -137,7 +137,7 @@ body{
 }
 
 .best-title{
-    color: #02C39A;
+    color: #F3DFA2;
 }
 
 
