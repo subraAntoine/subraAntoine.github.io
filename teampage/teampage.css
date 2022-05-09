@@ -1,0 +1,466 @@
+
+:root{
+    --beige : #F0F3BD;
+    --vert-light : #02C39A;
+    --vert-mid : #00A896;
+    --blue-mid : #028090;
+    --blue-dark : #05688D;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    font-family: 'Oswald', sans-serif;
+}
+
+
+
+
+
+
+
+
+.primary-header{
+    font-size: 40px;
+    height: 80vh;
+    background-image: url("../Image/span-class-caption_text-inspired-by-a-target-_new-href-https-en-wikipedia-org-wiki-charles_i_in_three_positions-anthony-van-dyk-i-charles-i-in-three-positions-i-a-1635-6-span.jpeg");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+
+
+    padding: 15px 50px 0 50px;
+    font-family: 'Bebas Neue', cursive;
+    position: relative;
+    transition: width ;
+
+
+}
+
+.menu-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#logo-header{
+    height: 80%;
+    width: 100px;
+
+}
+
+@keyframes logoAnimation {
+    0%{
+        transform:  rotate(0deg);
+    }
+    33%{
+        transform:rotate(15deg);
+    }
+    66%{
+        transform: rotate(-15deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+
+}
+#logo-header:hover{
+    animation: logoAnimation 0.5s ease-out;
+}
+
+.header-element{
+    color: white;
+    text-decoration: none;
+}
+
+#title{
+    font-style: italic;
+    font-size: 50px;
+
+}
+
+#video-element{
+    padding-right: 50px;
+}
+
+.header-secondary-element{
+    color: white;
+    font-size: 35px ;
+    text-decoration: none;
+
+}
+.main-title{
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    color: white;
+    font-size: 100px;
+    z-index: 0;
+    transition: width .6s ease;
+}
+
+/*.main-title span{
+    color: var(--vert-light);
+    font-style: italic;
+}*/
+
+.main-title::after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    left: -10px;
+    top: 80px;
+    background: var(--vert-light);
+    width: 60%;
+    z-index: -1;
+    transition: width .6s ease;
+}
+
+@keyframes width {
+    0%{
+        width: 40%;
+    }
+    100%{
+        width: 60%;
+        transform: scale(1.05);
+        background-size: 130%;
+    }
+}
+
+.main-title:hover{
+    animation: width 1s ease forwards;
+}
+
+.best-title{
+    color: #02C39A;
+}
+
+
+/* ==================
+        article
+ ======================*/
+
+.card-title{
+    text-align: center;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 120px;
+    margin-top: 80px;
+    margin-bottom: 100px;
+    font-weight: bold;
+
+}
+
+.card-title::after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    left: 500px;
+    top: 80px;
+    background: var(--vert-light);
+    width: 30%;
+    z-index: -1;
+}
+
+
+.team-container{
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: repeat(6,1fr);
+    grid-auto-rows: 25vw;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    padding: 0 100px;
+
+}
+
+#team-character1{
+    grid-column: 1/3;
+    grid-row: 1;
+    background-color: var(--vert-light);
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+@keyframes tiles1 {
+    0%{
+        grid-column: 1/4;
+    }
+    100%{
+        grid-column: 1/5;
+    }
+
+}
+
+@keyframes tiles2{
+    0%{
+        grid-column: 4/7;
+    }
+    100%{
+        grid-column: 5/7;
+    }
+}
+
+@keyframes tiles3 {
+    0%{
+        grid-column: 3/7;
+    }
+    100%{
+        grid-column: 3/7;
+    }
+}
+
+@keyframes tiles4 {
+    0%{
+        grid-column: 1/4;
+    }
+    100%{
+        grid-column: 1/3;
+    }
+
+}
+
+
+
+
+#team-character1:hover{
+    animation: tiles1 ease .5s forwards;
+
+}
+
+#team-character1:hover ~ #team-character2{
+    animation: tiles2 ease .5s forwards;
+}
+
+#team-character2:hover{
+    animation: tiles3 ease .5s forwards;
+}
+
+#team-character2:hover ~ #team-character1{
+    animation: tiles4 ease .5s forwards;
+}
+
+
+
+
+
+
+
+#team-character4:hover{
+    animation: tiles1 ease .5s forwards;
+
+}
+
+#team-character4:hover ~ #team-character5{
+    animation: tiles2 ease .5s forwards;
+}
+
+#team-character5:hover{
+    animation: tiles3 ease .5s forwards;
+}
+
+#team-character5:hover ~ #team-character4{
+    animation: tiles4 ease .5s forwards;
+}
+
+
+
+
+
+
+#team-character2{
+    grid-column: 3/7;
+    grid-row: 1;
+    background-color: var(--vert-light);
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#team-character3{
+    grid-column: 2/6;
+    grid-row: 2;
+    background-color: var(--vert-light);
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+
+
+#team-character4{
+    grid-column: 1/3;
+    grid-row: 3;
+    background-color: var(--vert-light);
+    border-radius: 15px;
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#team-character5{
+    grid-column: 3/7;
+    grid-row: 3;
+    background-color: var(--vert-light);
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.charac-text{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+
+
+#charac-image1{
+    background-image: url("../Image/charac1.jpeg");
+    height: 300px;
+    width: 300px;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+
+
+
+
+#charac-image2{
+    background-image: url("../Image/charac2.png");
+    height: 300px;
+    width: 300px;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+
+#charac-image3{
+    background-image: url("../Image/charac3.jpeg");
+    height: 300px;
+    width: 300px;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+
+#charac-image4{
+    background-image: url("../Image/charac4.jpeg");
+    height: 300px;
+    width: 300px;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+
+#charac-image5{
+    background-image: url("../Image/charac5.jpeg");
+    height: 300px;
+    width: 300px;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+/* =====================
+        Footer
+======================== */
+
+
+
+
+
+
+.footer{
+
+    background-color: var(--vert-mid);
+    height: 70vh;
+    color: white;
+    padding-top:110px;
+
+
+}
+
+.footer-logo{
+
+    width:100px;
+    height:100px;
+    background-image: url("../Image/logocroco2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.footer-logo:hover{
+    animation: logoAnimation 0.5s ease-out;
+}
+
+
+.footer-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-title{
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 60px;
+    font-style: italic;
+}
+
+.footer-text{
+    text-align: center;
+    font-size: 35px;
+    font-style: italic;
+    margin-top: 70px;
+    margin-bottom: 100px;
+}
+
+.footer-link-element{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 20px 0 20px 0;
+    border-bottom-style: solid;
+}
+
+.footer-link-element:hover{
+    padding-bottom: 5px;
+}

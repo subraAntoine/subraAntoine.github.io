@@ -1,0 +1,282 @@
+
+:root{
+    --beige : #F0F3BD;
+    --vert-light : #02C39A;
+    --vert-mid : #00A896;
+    --blue-mid : #028090;
+    --blue-dark : #05688D;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    font-family: 'Oswald', sans-serif;
+}
+
+
+
+
+
+
+
+
+.primary-header{
+    font-size: 40px;
+    height: 80vh;
+    background-image: url("../Image/meilleurs-albums-rap-francais-2020.png");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+
+
+    padding: 15px 50px 0 50px;
+    font-family: 'Bebas Neue', cursive;
+    position: relative;
+    transition: width ;
+
+
+}
+
+.menu-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#logo-header{
+    height: 80%;
+    width: 100px;
+
+}
+
+@keyframes logoAnimation {
+    0%{
+        transform:  rotate(0deg);
+    }
+    33%{
+        transform:rotate(15deg);
+    }
+    66%{
+        transform: rotate(-15deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+
+}
+#logo-header:hover{
+    animation: logoAnimation 0.5s ease-out;
+}
+
+.header-element{
+    color: white;
+    text-decoration: none;
+}
+
+#title{
+    font-style: italic;
+    font-size: 50px;
+
+}
+
+#video-element{
+    padding-right: 50px;
+}
+
+.header-secondary-element{
+    color: white;
+    font-size: 35px ;
+    text-decoration: none;
+
+}
+.main-title{
+    position: absolute;
+    top: 60%;
+    left: 10%;
+    color: white;
+    font-size: 100px;
+    z-index: 0;
+    transition: width .6s ease;
+}
+
+/*.main-title span{
+    color: var(--vert-light);
+    font-style: italic;
+}*/
+
+.main-title::after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    left: -10px;
+    top: 80px;
+    background: var(--vert-light);
+    width: 60%;
+    z-index: -1;
+    transition: width .6s ease;
+}
+
+@keyframes width {
+    0%{
+        width: 40%;
+    }
+    100%{
+        width: 60%;
+        transform: scale(1.05);
+        background-size: 130%;
+    }
+}
+
+.main-title:hover{
+    animation: width 1s ease forwards;
+}
+
+.best-title{
+    color: #02C39A;
+}
+
+
+/* ==================
+        article
+ ======================*/
+
+
+.card-title{
+    text-align: center;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 120px;
+    margin-top: 80px;
+    margin-bottom: 100px;
+    font-weight: bold;
+
+}
+
+.card-title::after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -10px;
+    left: 500px;
+    top: 80px;
+    background: var(--vert-light);
+    width: 30%;
+    z-index: -1;
+}
+
+.article-texte{
+    display: flex;
+    height: auto;
+    justify-content: space-around;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    align-items: center;
+
+
+}
+
+.article-title{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.text{
+    width: 40vw;
+
+    font-size: 25px;
+    padding: 50px;
+}
+
+.portrait-kanye{
+
+}
+
+.image-kanye{
+    width: 40vw;
+    margin: 100px;
+    padding: 10px;
+    border-style: solid;
+    border-color: #02C39A;
+    border-width: 15px;
+}
+
+
+
+.portrait-kanye::after{
+
+}
+
+
+
+/* =====================
+        Footer
+======================== */
+
+
+
+
+
+
+.footer{
+
+    background-color: var(--vert-mid);
+    height: 70vh;
+    color: white;
+    padding-top:110px;
+
+
+}
+
+.footer-logo{
+
+    width:100px;
+    height:100px;
+    background-image: url("../Image/logocroco2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.footer-logo:hover{
+    animation: logoAnimation 0.5s ease-out;
+}
+
+
+.footer-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-title{
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 60px;
+    font-style: italic;
+}
+
+.footer-text{
+    text-align: center;
+    font-size: 35px;
+    font-style: italic;
+    margin-top: 70px;
+    margin-bottom: 100px;
+}
+
+.footer-link-element{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 20px 0 20px 0;
+    border-bottom-style: solid;
+}
+
+.footer-link-element:hover{
+    padding-bottom: 5px;
+}
